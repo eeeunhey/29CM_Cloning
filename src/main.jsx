@@ -3,8 +3,9 @@ import "./index.css";
 import App from "./App.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import HomePage from "./page/HomePage.jsx";
-import Product from "./page/Product.jsx";
 import LoginPage from "./page/LoginPage.jsx";
+import ProductAll from "./page/ProductAll.jsx";
+import ProductDetail from "./page/ProductDetail.jsx";
 
 // 라우트 정의하기
 //1. 전체 상품페이지, 로그인, 상품상세페이지
@@ -23,7 +24,8 @@ const router = createBrowserRouter([
     path: "/",
     element: <App />,
     children: [{ path: "/", element: <HomePage /> },
-                {path: "/product", element: <Product />},
+                {path: "/product", element: <ProductAll />},
+                {path: "/product/:id", element: <ProductDetail />},
                 {path: "/login", element: <LoginPage />},
                 
     ],
