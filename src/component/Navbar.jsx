@@ -1,4 +1,5 @@
 import { Search, User } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const menuList = [
@@ -26,7 +27,7 @@ const Navbar = () => {
         <ul className="flex gap-10 items-center p-10">
           {menuList.map((menu, index) => (
             <li key={index} className="hover:text-gray-600">
-              {menu}
+              <Link to={`/product`} >{menu}</Link>
             </li>
           ))}
         </ul>
