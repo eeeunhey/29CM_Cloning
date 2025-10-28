@@ -4,7 +4,7 @@ const ProductCard = ({ productList }) => {
             <div></div>
 
 
-            <div className="flex flex-wrap justify-center items-center gap-8 p-10">
+            <div className="flex flex-wrap justify-center items-center gap-8 p-50">
 
                 {productList.map((product, i) => (
                     <div key={i} className="w-80 text-center">
