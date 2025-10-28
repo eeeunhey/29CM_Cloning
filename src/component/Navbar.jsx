@@ -20,14 +20,17 @@ const Navbar = () => {
       </div>
 
       <div className="nav-section">
-        <img src="https://asset.29cm.co.kr/next-contents/2023/06/08/3f8131682d124d16b336774ba51c4a3e_20230608162823.png" />
+        <Link to={"/"} >
+          <img src="https://asset.29cm.co.kr/next-contents/2023/06/08/3f8131682d124d16b336774ba51c4a3e_20230608162823.png" />
+        </Link>
+
       </div>
 
       <div className="flex justify-center items-center">
         <ul className="flex gap-10 items-center p-10">
           {menuList.map((menu, index) => (
             <li key={index} className="hover:text-gray-600">
-              <Link to={`/product`} >{menu}</Link>
+              <Link to={"/product"} >{menu}</Link>
             </li>
           ))}
         </ul>
