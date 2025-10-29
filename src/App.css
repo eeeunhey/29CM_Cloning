@@ -5,6 +5,8 @@
 }
 .menu-list {
   display: flex;
+
+  margin: 30px;
 }
 .menu-list li {
   padding: 10px;
@@ -17,5 +19,4 @@
 .nav-section {
  display: flex;
  justify-content: center;
- padding: 30px;
 }
