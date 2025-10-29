@@ -1,48 +1,54 @@
 import { Search, User } from "lucide-react";
 import { Link } from "react-router-dom";
 
-const Navbar = () => {
-  const menuList = [
-    "BEST",
-    "WOMEN",
-    "MEN",
-    "INTERIOR",
-    "KITCHEN",
-    "DIGITAL",
-    "CULTURE",
-  ];
 
+const MENU = [
+  "BEST",
+  "WOMEN",
+  "MEN",
+  "INTERIOR",
+  "KITCHEN",
+  "DIGITAL",
+  "CULTURE",
+  "NEW IN",
+];
+
+export default function Navbar() {
   return (
-    <div>
-      <div className="login-button">
-        <User />
-        <div>로그인</div>
-      </div>
+    <nav className="navbar">
+      <div className="nav-top">
 
-      <div className="nav-section">
-        <img src="https://asset.29cm.co.kr/next-contents/2023/06/08/3f8131682d124d16b336774ba51c4a3e_20230608162823.png" />
-      </div>
+        <div >
+          <Link to="/product">
+            <img
+              src="https://asset.29cm.co.kr/next-contents/2023/06/08/3f8131682d124d16b336774ba51c4a3e_20230608162823.png"
+              alt="29CM 로고"
+              className="w-28 h-auto"
+            />
+          </Link>
+        </div>
 
-      <div className="flex justify-center items-center">
-        <ul className="flex gap-10 items-center p-10">
-          {menuList.map((menu, index) => (
-            <li key={index} className="hover:text-gray-600">
-              <Link to={`/product`} >{menu}</Link>
-            </li>
-          ))}
-        </ul>
 
-        <div className="flex  items-center gap-5 right-15">
-          <Search />
-          <input
-            type="text"
-            placeholder="제품검색"
-            className="border-b border-gray-500 focus:border-gray-600 focus:outline-none px-2"
-          />
+        <div className="nav-search">
+          <Search className="ml-5"/>
+          <input type="text" placeholder="검색" />
+        </div>
+        
+
+        <div className="nav-login">
+          <User />
+          <span>로그인</span>
         </div>
       </div>
-    </div>
-  );
-};
 
-export default Navbar;
+
+      <ul className="nav-menu">
+        {MENU.map((item, i) => (
+          <li key={item}>
+            {item}
+          </li>
+        ))}
+      </ul>
+    </nav>
+  );
+}

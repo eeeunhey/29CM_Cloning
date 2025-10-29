@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import ProductCard from '../component/ProductCard';
+import {Container} from 'react-bootstrap';
+
 
 const ProductAll = () => {
   const [productList, setProductList] = useState([]);
@@ -18,7 +20,11 @@ const ProductAll = () => {
   }, [])
 
   return (
+
     <div>
+        <Container>
+
+        </Container>
 
         < ProductCard productList={productList} />
 
