@@ -1,5 +1,6 @@
 import { Search, User } from "lucide-react";
 import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 
 const MENU = [
@@ -14,12 +15,17 @@ const MENU = [
 ];
 
 export default function Navbar() {
+ const navigate = useNavigate();
+  const goToLogin=()=>{
+    navigate("/login")
+  }
+
   return (
     <nav className="navbar">
       <div className="nav-top">
 
         <div >
-          <Link to="/product">
+          <Link to="/products">
             <img
               src="https://asset.29cm.co.kr/next-contents/2023/06/08/3f8131682d124d16b336774ba51c4a3e_20230608162823.png"
               alt="29CM 로고"
@@ -35,16 +41,16 @@ export default function Navbar() {
         </div>
         
 
-        <div className="nav-login">
+        <div className="login-button" onClick={goToLogin}>
           <User />
-          <span>로그인</span>
+          <div>로그인</div>
         </div>
       </div>
 
 
       <ul className="nav-menu">
         {MENU.map((item, i) => (
-          <li key={item}>
+          <li key={i}>
             {item}
           </li>
         ))}

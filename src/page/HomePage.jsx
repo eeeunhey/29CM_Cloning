@@ -1,8 +1,12 @@
 import React from 'react'
+import ProductAll from './ProductAll'
 
 const HomePage = () => {
   return (
-    <div>HomePage</div>
+    <div>
+      <ProductAll />
+
+    </div>
   )
 }
 

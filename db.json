@@ -6,7 +6,7 @@
     "title": "모디세이 패딩 자켓_LC2992100",
     "price": 290000,
     "choice": false,
-    "new": false,
+    "new": true,
     "size": ["S", "M", "L"]
   },
   {
@@ -15,7 +15,7 @@
     "title": "MID-LENGTH DOWN JACKET V2 (KHAKI-BLACK)",
     "price": 225300,
     "choice": false,
-    "new": false,
+    "new": true,
     "size": ["S", "M", "L"]
   },
   {
@@ -24,7 +24,7 @@
     "title": "MIDDLE FUR JACKET, GRAY",
     "price": 242100,
     "choice": false,
-    "new": false,
+    "new": true,
     "size": ["S", "M", "L"]
   },
   {
@@ -33,7 +33,7 @@
     "title": "[스페셜오더] Hooded Fly Light Down Jacket",
     "price": 271100,
     "choice": false,
-    "new": false,
+    "new": true,
     "size": ["S", "M", "L"]
   },
   {
@@ -42,7 +42,7 @@
     "title": "CT Lightweight Down Jacket Light Gray",
     "price": 206100,
     "choice": false,
-    "new": false,
+    "new": true,
     "size": ["S", "M", "L"]
   },
   {
