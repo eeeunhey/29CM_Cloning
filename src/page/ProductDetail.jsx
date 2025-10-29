@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Container, Row, Col, Button,Form } from "react-bootstrap";
+import { Container, Row, Col, Button, Form } from "react-bootstrap";
 
 import { useParams } from "react-router-dom";
 
@@ -18,30 +18,29 @@ const ProductDetail = () => {
     getProductDetail();
   }, []);
   return (
-    <div>
+    <Container className="product-detail-container">
+      <Row className="align-items-center">
+        <Col md={6} className="text-center">
+          <img src={product?.img} alt={product?.title} className="product-img" />
+        </Col>
 
-      <Container>
-        <Row>
-          <Col className="product-img">
-            <img src={product?.img}/>
-          </Col>
-          <Col>
-            <div>{product?.title}</div>
-             <div>\ {product?.price}</div>
-             <div>{product?.choice}</div>
-             <div>{product?.size}</div>
-             <Form.Select>
-              <option></option>
-              <option>S</option>
-              <option>M</option>
-              <option>L</option>
-             </Form.Select>
-             <Button>추가</Button>
-          </Col>
+        <Col md={6} className="product-info">
+          <h2 className="product-title">{product?.title}</h2>
+          <p className="product-price">₩ {product?.price}</p>
 
-        </Row>
-      </Container>
-    </div>
+          <Form.Select className="product-select">
+            <option value="">사이즈 선택</option>
+            <option>S</option>
+            <option>M</option>
+            <option>L</option>
+          </Form.Select>
+
+          <Button variant="dark" className="w-100 mt-3">
+            추가
+          </Button>
+        </Col>
+      </Row>
+    </Container>
   );
 };
 

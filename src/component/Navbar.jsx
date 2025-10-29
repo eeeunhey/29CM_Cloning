@@ -2,7 +2,6 @@ import { Search, User } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
-
 const MENU = [
   "BEST",
   "WOMEN",
@@ -15,17 +14,16 @@ const MENU = [
 ];
 
 export default function Navbar() {
- const navigate = useNavigate();
-  const goToLogin=()=>{
-    navigate("/login")
-  }
+  const navigate = useNavigate();
+  const goToLogin = () => {
+    navigate("/login");
+  };
 
   return (
     <nav className="navbar">
       <div className="nav-top">
-
-        <div >
-          <Link to="/products">
+        <div>
+          <Link to="/">
             <img
               src="https://asset.29cm.co.kr/next-contents/2023/06/08/3f8131682d124d16b336774ba51c4a3e_20230608162823.png"
               alt="29CM 로고"
@@ -34,12 +32,10 @@ export default function Navbar() {
           </Link>
         </div>
 
-
         <div className="nav-search">
-          <Search className="ml-5"/>
-          <input type="text" placeholder="검색" />
+          <Search className="ml-5" />
+          <input type="text" placeholder="찾으시는 상품을 입력하세요" />
         </div>
-        
 
         <div className="login-button" onClick={goToLogin}>
           <User />
@@ -47,12 +43,13 @@ export default function Navbar() {
         </div>
       </div>
 
-
       <ul className="nav-menu">
         {MENU.map((item, i) => (
-          <li key={i}>
+          <Link
+            to="/products"
+          >
             {item}
-          </li>
+          </Link>
         ))}
       </ul>
     </nav>
