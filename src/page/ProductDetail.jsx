@@ -7,7 +7,7 @@ const ProductDetail = () => {
   let { id } = useParams();
   const [product, setProduct] = useState(null);
   const getProductDetail = async () => {
-    let url = `http://localhost:3001/products?id=${id}`;
+    let url = `https://my-json-server.typicode.com/eeeunhey/29CM_Cloning/products?id=${id}`;
     let res = await fetch(url);
     let data = await res.json();
     console.log(data);
