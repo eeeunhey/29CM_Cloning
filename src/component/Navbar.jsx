@@ -57,8 +57,8 @@ export default function Navbar() {
       </div>
 
       <ul className="nav-menu">
-        {MENU.map((item, i) => (
-          <Link to="/products">{item}</Link>
+        {MENU.map((item) => (
+          <Link to="/products" key={item}>{item}</Link>
         ))}
       </ul>
     </nav>
