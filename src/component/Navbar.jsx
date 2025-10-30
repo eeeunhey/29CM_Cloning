@@ -19,6 +19,15 @@ export default function Navbar() {
     navigate("/login");
   };
 
+  const search = (e) => {
+    if(e.key==="Enter") {
+      console.log("뭐가 눌렸나",e.key)
+      let keyword = e.target.value
+      console.log(keyword)
+      navigate(`/?q=${keyword}`)
+    }
+  }
+
   return (
     <nav className="navbar">
       <div className="nav-top">
@@ -34,7 +43,11 @@ export default function Navbar() {
 
         <div className="nav-search">
           <Search className="ml-5" />
-          <input type="text" placeholder="찾으시는 상품을 입력하세요" />
+          <input
+            type="text"
+            placeholder="찾으시는 상품을 입력하세요"
+            onKeyDown={search}
+          />
         </div>
 
         <div className="login-button" onClick={goToLogin}>
@@ -45,11 +58,7 @@ export default function Navbar() {
 
       <ul className="nav-menu">
         {MENU.map((item, i) => (
-          <Link
-            to="/products"
-          >
-            {item}
-          </Link>
+          <Link to="/products">{item}</Link>
         ))}
       </ul>
     </nav>
